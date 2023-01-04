@@ -18,3 +18,55 @@ html, body, #__next {
 .work-item {
     padding: .75rem;
 }
+
+.carousel {
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .carousel__navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .carousel__photos {
+    display: flex;
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .carousel__photo {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel__photo--visible {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .carousel__photo--hidden {
+    display: none;
+  }
+  
+  .carousel__indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .carousel__indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .carousel__indicator--active {
+    background-color: #333;
+  }

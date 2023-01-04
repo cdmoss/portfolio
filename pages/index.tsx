@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
+import Carousel from "../components/Carousel";
 import Selector from "../components/Selector";
+import { CNP } from "../data/workdata";
 
 export default function Home() {
     return (
@@ -10,7 +12,7 @@ export default function Home() {
                     CHASE MOSSING
                 </Link>
             </header>
-            <main className="flex flex-col w-5/6 m-auto">
+            <main className="flex flex-col w-2/3 m-auto">
                 <h3 className="mb-3 ml-10">My work</h3>
                 <hr
                     style={{
@@ -22,9 +24,9 @@ export default function Home() {
                 <Selector
                     headings={["Trad Data Monitor", "Click & Push", "YARO"]}
                     views={{
-                        "Trad Data Monitor": "",
-                        "Click & Push": "",
-                        YARO: "",
+                        "Trad Data Monitor": <p></p>,
+                        "Click & Push": <Carousel blurb={CNP.blurb} photos={CNP.photos} />,
+                        YARO: <p></p>,
                     }}
                 />
             </main>
