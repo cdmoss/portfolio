@@ -7,11 +7,11 @@ interface HeadingListProps {
 }
 
 const Selector: React.FC<HeadingListProps> = ({ headings, views }) => {
-    const [selectedHeading, setSelectedHeading] = useState<string | null>(null);
+    const [selectedHeading, setSelectedHeading] = useState<string | null>("Click & Push");
 
     return (
         <div className="heading-list flex">
-            <div className="heading-list__sidebar w-1/4">
+            <div className="heading-list__sidebar w-1/6">
                 {headings.map((heading) => (
                     <div
                         className={classNames(
@@ -32,7 +32,7 @@ const Selector: React.FC<HeadingListProps> = ({ headings, views }) => {
                     </div>
                 ))}
             </div>
-            <div className="heading-list__view w-3/4 p-4">
+            <div className="heading-list__view w-5/6 p-4">
                 {selectedHeading && views[selectedHeading]}
             </div>
         </div>

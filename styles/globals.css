@@ -1,9 +1,16 @@
+@media (max-width: 1600px) {
+  body {
+    font-size: .7rem;
+  }
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 html, body, #__next {
     height: 100%;
+    font-size: 1rem;
 }
 
 #__next {
@@ -21,7 +28,7 @@ html, body, #__next {
 
 .carousel {
     position: relative;
-    margin: 0 auto;
+    width: 100%;
   }
   
   .carousel__navigation {
@@ -29,25 +36,19 @@ html, body, #__next {
     justify-content: space-between;
     margin-bottom: 20px;
   }
+
+  .carousel__nav-button {
+    cursor: pointer;
+  }
   
   .carousel__photos {
     display: flex;
-    position: relative;
-    height: 250px;
-    overflow: hidden;
   }
   
   .carousel__photo {
     object-fit: cover;
     transition: transform 0.5s ease;
   }
-  
-  .carousel__photo--visible {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
   .carousel__photo--hidden {
     display: none;
   }
